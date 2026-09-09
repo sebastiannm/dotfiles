@@ -1,6 +1,6 @@
 keybind = shift+enter=text:\x1b\r
 clipboard-paste-protection=false
 shell-integration-features = no-cursor,ssh-env
-theme = One Double Dark
+theme = 0x96f
 #Font
 font-family = "JetBrainsMono Nerd Font"
