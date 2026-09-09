@@ -1,0 +1,115 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "disable_ai": true,
+  "terminal": {
+    "working_directory": "current_project_directory",
+  },
+  "proxy": "",
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "right",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "agent_servers": {},
+  "edit_predictions": {
+    "allow_data_collection": "no",
+    "provider": "zed",
+    "mode": "subtle",
+  },
+  "colorize_brackets": true,
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "ui_font_family": ".ZedSans",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "scrollbar": {
+    "diagnostics": "all",
+    "cursors": true,
+  },
+  "cursor_blink": false,
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "JetBrains New UI Icons (Dark)",
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Min Light (Solid)",
+    "dark": "Min Dark (Solid)",
+  },
+  "language_servers": ["!eslint", "..."],
+  "format_on_save": "on",
+  // "languages": {
+  //   "JavaScript": {
+  //     "formatter": { "language_server": { "name": "biome" } },
+  //     "code_actions_on_format": {
+  //       "source.fixAll.biome": true,
+  //       "source.organizeImports.biome": true,
+  //     },
+  //   },
+  //   "TypeScript": {
+  //     "formatter": { "language_server": { "name": "biome" } },
+  //     "code_actions_on_format": {
+  //       "source.fixAll.biome": true,
+  //       "source.organizeImports.biome": true,
+  //     },
+  //   },
+  //   "TSX": {
+  //     "formatter": { "language_server": { "name": "biome" } },
+  //     "code_actions_on_format": {
+  //       "source.fixAll.biome": true,
+  //       "source.organizeImports.biome": true,
+  //     },
+  //   },
+  //   "JSON": {
+  //     "formatter": { "language_server": { "name": "biome" } },
+  //     "code_actions_on_format": {
+  //       "source.fixAll.biome": true,
+  //       "source.organizeImports.biome": true,
+  //     },
+  //   },
+  //   "CSS": {
+  //     "formatter": { "language_server": { "name": "biome" } },
+  //   },
+  //   "HTML": {
+  //     "formatter": {
+  //       "external": {
+  //         "command": "prettier",
+  //         "arguments": ["--stdin-filepath", "{buffer_path}"],
+  //       },
+  //     },
+  //   },
+  //   "Angular": {
+  //     "formatter": {
+  //       "external": {
+  //         "command": "prettier",
+  //         "arguments": ["--stdin-filepath", "{buffer_path}"],
+  //       },
+  //     },
+  //   },
+  // },
+}
