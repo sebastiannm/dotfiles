@@ -1,0 +1,44 @@
+# Dev Container helpers
+ds() {
+  devcontainer exec --workspace-folder . bash
+}
+
+dcb() {
+  devcontainer up --workspace-folder . --remove-existing-container
+}
+
+dce() {
+  devcontainer exec --workspace-folder . "$@"
+}
+
+dc() {
+  devcontainer exec --workspace-folder "$PWD" "$@"
+}
+
+dcstart(){
+  devcontainer up --workspace-folder .
+}
+
+dcstop() {
+  local id
+  id=$(docker ps -q --filter "label=devcontainer.local_folder=$PWD")
+
+  if [[ -z "$id" ]]; then
+    echo "No running Dev Container found for this folder."
+    return 1
+  fi
+
+  docker stop "$id"
+}
+
+dcd() {
+  local id
+  id=$(docker ps -aq --filter "label=devcontainer.local_folder=$PWD")
+
+  if [[ -z "$id" ]]; then
+    echo "No Dev Container found for this folder."
+    return 1
+  fi
+
+  docker rm -f "$id"
+}

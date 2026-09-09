@@ -1,0 +1,15 @@
+[include]
+	path = ~/.dotfiles/.gitconfig.local
+[commit]
+	gpgsign = false
+[gpg]
+	program = /usr/local/bin/gpg
+[init]
+	defaultBranch = main
+[pull]
+	rebase = true
+[alias]
+	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+[core]
+	excludesfile = ~/.dotfiles/.gitignore_global
+	editor = vim

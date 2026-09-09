@@ -1,0 +1,8 @@
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias up='brew update && brew upgrade --greedy && brew cleanup --prune=all && npm install -g npm@latest && npm update -g'
+alias clean='uv cache clean && npm cache clean --force && docker system prune -f'
+alias clean-docker-volumes='docker volume prune -f'

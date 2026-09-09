@@ -1,0 +1,3 @@
+NPM_CHECK_INSTALLER=npm
+export XDG_CONFIG_HOME="$HOME/.config"
+export CLOUDSDK_PYTHON="$HOME/.local/bin/python3"
