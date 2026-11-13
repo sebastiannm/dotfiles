@@ -35,9 +35,18 @@ Not lazy about: understanding the problem (read it fully and trace the real flow
 - Do not run destructive Git commands, including force-pushes, history rewrites, or branch deletion.
 - Leave all Git changes and publishing actions for manual review and execution.
 
+## Tests
+
+- Test logic where it lives, not again in every caller.
+- Extend existing tests before creating a new test file.
+- Add tests for non-trivial behavior, not for every changed file. Test callers only for their own behavior.
+- Run relevant tests. Say what you did not run.
+
 ## Language
 
-Use clear, simple English.
+- Write UI messages and other user-facing text for people whose first language is not English.
+- Use common words, short sentences and direct instructions.
+- Error messages should say what happened and what the user can do next. Do not blame the user.
 
 ## Plans
 
