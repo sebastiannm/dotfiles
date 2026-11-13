@@ -31,14 +31,14 @@ brew "uv"
 brew "zoxide"
 # Coding agent with the IDE wired in
 brew "can1357/tap/omp", trusted: true
-cask "font-jetbrains-mono-nerd-font"
+cask "font-jetbrains-mono-nerd-font" if OS.mac?
 # Media system
-cask "jellyfin"
+cask "jellyfin" if OS.mac?
 # Utility to uninstall apps and remove leftover files from old/uninstalled apps
-cask "pearcleaner"
+cask "pearcleaner" if OS.mac?
 # Open-source BitTorrent client
-cask "transmission"
+cask "transmission" if OS.mac?
 # REST, GraphQL and gRPC client
-cask "yaak"
+cask "yaak" if OS.mac?
 npm "@devcontainers/cli"
 npm "firebase-tools"
