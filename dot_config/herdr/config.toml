@@ -26,6 +26,7 @@ next_workspace = ["ctrl+shift+]", "ctrl+}"]
 key = "prefix+o"
 type = "shell"
 command = 'open "$HERDR_ACTIVE_PANE_CWD"'
+description = "Open current folder in the active project"
 
 [[keys.command]]
 key = "prefix+g"
@@ -34,5 +35,8 @@ command = 'cd "${HERDR_ACTIVE_PANE_CWD:-$PWD}" && exec lazygit'
 description = "Open Lazygit in the active project"
 
 [theme]
-name = "catppuccin"
+name = "vesper"
 auto_switch = false
+
+[theme.custom]
+overlay0 = "#a0a0a0"

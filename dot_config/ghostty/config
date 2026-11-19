@@ -1,6 +1,10 @@
 keybind = shift+enter=text:\x1b\r
 clipboard-paste-protection=false
-shell-integration-features = no-cursor,ssh-env
-theme = 0x96f
+shell-integration-features = ssh-env,ssh-terminfo
+theme = Vesper
+background = #222222
 #Font
 font-family = "JetBrainsMono Nerd Font"
+
+background-opacity = 0.85
+background-blur-radius = 20
