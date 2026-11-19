@@ -1,0 +1,35 @@
+customCommands:
+  - key: "C"
+    command: |
+      set -o pipefail
+      "${DEFAULT_AGENT:?Set DEFAULT_AGENT before launching Lazygit}" \
+        -p "/seb-commit" \
+        --model "${COMMIT_MODEL:?Set COMMIT_MODEL before launching Lazygit}" \
+        --effort low \
+        --output-format stream-json |
+        jq --unbuffered -r '
+          if .event == "init" then
+            "Agent started"
+          elif .event == "step_update" then
+            .step_update
+            | if .step_type == "tool" and .state == "DONE" then
+                "$ " + (.tool_info.parameters.CommandLine // .tool_name // "tool"),
+                (.tool_info.error.message // empty)
+              else
+                empty
+              end
+          elif .event == "result" then
+            .result
+            | if .status == "SUCCESS" then
+                "\n" + .response
+              else
+                error(.error // ("Agent ended with status: " + .status))
+              end
+          else
+            empty
+          end
+        '
+    description: "Commit with AI"
+    context: "files"
+    loadingText: "Creating local commit"
+    output: terminal

@@ -31,9 +31,19 @@ Not lazy about: understanding the problem (read it fully and trace the real flow
 
 ## Git and publishing
 
-- Never commit, push, deploy, publish, create releases, or run `npm publish`.
-- Do not run destructive Git commands, including force-pushes, history rewrites, or branch deletion.
-- Leave all Git changes and publishing actions for manual review and execution.
+- Do not stage, unstage, or commit changes unless I explicitly request it,
+  directly or by invoking a skill whose stated purpose includes those actions.
+- Authorization to commit permits staging the relevant changes and creating
+  a local commit. Preserve any existing staged selection; do not add unrelated
+  changes or unstage files without asking.
+- After creating a local commit, stop so I can review it and push manually.
+- Never push, deploy, publish, create releases, or run `npm publish`.
+  Publishing actions remain manual.
+- Do not run destructive Git commands, including force-pushes, history
+  rewrites, hard resets, or branch deletion.
+- Do not amend commits or bypass Git hooks.
+- If a hook or commit fails, report it and stop. Do not automatically fix
+  files, restage changes, or retry.
 
 ## Tests
 

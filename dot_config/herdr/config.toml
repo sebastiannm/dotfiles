@@ -1,0 +1,38 @@
+onboarding = false
+
+[ui]
+hide_tab_bar_when_single_tab = true
+copy_on_select = false
+window_title = "{workspace}: {terminal_title}"
+
+[terminal]
+new_cwd = "follow"
+
+[keys]
+# Reload settings
+reload_config = "prefix+r"
+
+focus_pane_left = ["prefix+h", "ctrl+shift+h"]
+focus_pane_down = ["prefix+j", "ctrl+shift+j"]
+focus_pane_up = ["prefix+k", "ctrl+shift+k"]
+focus_pane_right = ["prefix+l", "ctrl+shift+l"]
+
+# Workspace switching
+previous_workspace = ["ctrl+shift+[", "ctrl+{"]
+next_workspace = ["ctrl+shift+]", "ctrl+}"]
+
+# Open current directory
+[[keys.command]]
+key = "prefix+o"
+type = "shell"
+command = 'open "$HERDR_ACTIVE_PANE_CWD"'
+
+[[keys.command]]
+key = "prefix+g"
+type = "pane"
+command = 'cd "${HERDR_ACTIVE_PANE_CWD:-$PWD}" && exec lazygit'
+description = "Open Lazygit in the active project"
+
+[theme]
+name = "catppuccin"
+auto_switch = false
