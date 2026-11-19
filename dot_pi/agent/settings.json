@@ -1,0 +1,17 @@
+{
+  "theme": "titanium",
+  "packages": [
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@quandev104/pi-style",
+    "npm:pi-add-dir",
+    "npm:@llblab/pi-telegram"
+  ],
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-6.1-terra",
+  "defaultTools": [
+    "+codemode"
+  ],
+  "tuiMode": "fullscreen",
+  "quietStartup": true,
+  "showHardwareCursor": true
+}
