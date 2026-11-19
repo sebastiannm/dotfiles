@@ -92,3 +92,7 @@ devcontainer up --workspace-folder .
 ```
 
 If a project does not include Dev Container configuration, follow that project's development-environment instructions.
+
+## Coding preferences
+
+- No single-use helpers.

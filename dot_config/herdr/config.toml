@@ -12,6 +12,9 @@ new_cwd = "follow"
 # Reload settings
 reload_config = "prefix+r"
 
+move_tab_previous = "ctrl+shift+left"
+move_tab_next = "ctrl+shift+right"
+
 focus_pane_left = ["prefix+h", "ctrl+shift+h"]
 focus_pane_down = ["prefix+j", "ctrl+shift+j"]
 focus_pane_up = ["prefix+k", "ctrl+shift+k"]
