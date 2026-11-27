@@ -21,6 +21,8 @@ brew "lazygit"
 brew "lsd"
 # NCurses Disk Usage
 brew "ncdu"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
 # AI agent toolkit
 brew "pi-coding-agent"
 # Search tool like grep and The Silver Searcher
