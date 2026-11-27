@@ -1,6 +1,6 @@
-tap "abue-ammar/tinycast", trusted: true
+tap "abue-ammar/tinycast", trusted: true if OS.mac?
 tap "can1357/tap"
-tap "hashicorp/tap"
+tap "hashicorp/tap" if OS.mac?
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Manage your dotfiles across multiple diverse machines, securely
@@ -32,18 +32,18 @@ brew "uv"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Terraform
-brew "hashicorp/tap/terraform", trusted: true
-cask "font-jetbrains-mono-nerd-font"
+brew "hashicorp/tap/terraform", trusted: true if OS.mac?
+cask "font-jetbrains-mono-nerd-font" if OS.mac?
 # Media system
-cask "jellyfin"
+cask "jellyfin" if OS.mac?
 # Utility to uninstall apps and remove leftover files from old/uninstalled apps
-cask "pearcleaner"
+cask "pearcleaner" if OS.mac?
 # Application launcher and productivity tool
-cask "tinycast"
+cask "tinycast" if OS.mac?
 # Open-source BitTorrent client
-cask "transmission"
+cask "transmission" if OS.mac?
 # REST, GraphQL and gRPC client
-cask "yaak"
+cask "yaak" if OS.mac?
 uv "trafilatura"
 npm "@devcontainers/cli"
 npm "firebase-tools"
